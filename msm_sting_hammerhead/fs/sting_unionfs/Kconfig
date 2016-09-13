@@ -1,0 +1,17 @@
+config STING_UNION_FS
+	tristate "STING union file system (EXPERIMENTAL)"
+	depends on EXPERIMENTAL && STING
+	help
+	  A modification of unionfs for STING to launch and rollback attacks.
+
+config STING_UNION_FS_XATTR
+	bool "STING Unionfs extended attributes"
+	depends on STING_UNION_FS
+	help
+	  STING unionfs extended attributes support.
+
+config STING_UNION_FS_DEBUG
+	bool "STING Debug Unionfs"
+	depends on STING_UNION_FS
+	help
+	  If you say Y here, you can turn on debugging output from STING's unionfs.
